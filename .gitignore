@@ -1,0 +1,45 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+**/dist
+
+# dependencies
+node_modules
+.pnpm-store
+
+# test reports and coverage
+/packages/*/coverage
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - IntelliJ
+.idea/*
+!.idea/prettier.xml
+!.idea/jsLinters/eslint.xml
+!.idea/externalDependencies.xml
+dnb-web-pm-apps.iml
+
+# misc
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+tsconfig.tsbuildinfo
+/.nx
+
+# System Files
+.DS_Store
+Thumbs.db

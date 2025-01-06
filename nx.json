@@ -1,0 +1,57 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "inputs": [
+        "default",
+        {
+          "externalDependencies": ["esbuild"]
+        }
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "cache": true
+    },
+    "test": {
+      "inputs": [
+        "default",
+        {
+          "externalDependencies": ["jest"]
+        }
+      ],
+      "cache": true
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        {
+          "externalDependencies": ["eslint", "@eslint/js", "typescript-eslint"]
+        },
+        "{workspaceRoot}/eslint.config.js"
+      ],
+      "cache": true
+    },
+    "typecheck": {
+      "inputs": [
+        "default",
+        {
+          "externalDependencies": ["typescript"]
+        }
+      ],
+      "cache": true
+    }
+  },
+  "defaultBase": "origin/main",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "production": ["default"]
+  },
+  "useInferencePlugins": false
+}
