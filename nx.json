@@ -38,10 +38,10 @@
     "lint": {
       "inputs": [
         "default",
+        "{workspaceRoot}/eslint.config.js",
         {
           "externalDependencies": ["eslint", "@eslint/js", "typescript-eslint"]
-        },
-        "{workspaceRoot}/eslint.config.js"
+        }
       ],
       "cache": true
     },
