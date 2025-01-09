@@ -12,7 +12,11 @@
       "inputs": [
         "default",
         {
-          "externalDependencies": ["esbuild"]
+          "input": "self",
+          "dependencies": true
+        },
+        {
+          "externalDependencies": []
         }
       ],
       "outputs": ["{projectRoot}/dist"],
@@ -22,7 +26,11 @@
       "inputs": [
         "default",
         {
-          "externalDependencies": ["jest"]
+          "input": "self",
+          "dependencies": true
+        },
+        {
+          "externalDependencies": []
         }
       ],
       "cache": true
@@ -41,13 +49,17 @@
       "inputs": [
         "default",
         {
-          "externalDependencies": ["typescript"]
+          "input": "self",
+          "dependencies": true
+        },
+        {
+          "externalDependencies": []
         }
       ],
       "cache": true
     }
   },
-  "defaultBase": "origin/main",
+  "defaultBase": "origin/alternative-main",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*"],
