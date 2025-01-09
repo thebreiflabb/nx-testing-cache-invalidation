@@ -31,7 +31,7 @@
       "inputs": [
         "default",
         {
-          "externalDependencies": ["eslint"]
+          "externalDependencies": ["eslint", "@eslint/js", "typescript-eslint"]
         },
         "{workspaceRoot}/eslint.config.js"
       ],
@@ -50,8 +50,7 @@
   "defaultBase": "origin/main",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "sharedGlobals": ["{workspaceRoot}/nx.json"],
+    "default": ["{projectRoot}/**/*"],
     "production": ["default"]
   },
   "useInferencePlugins": false
